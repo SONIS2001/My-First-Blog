@@ -4,6 +4,17 @@
        </head>
     <body>
       <div>
+        <h1><a href="/">Django Girls Blog</a></h1>
+      </div>
+
+      {% for post in posts %}
+          <div>
+              <p>published: {{ post.published_date }}</p>
+              <h1><a href="">{{ post.title }}</a></h1>
+              <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+      {% endfor %}
+      <div>
         <h1><a href="">Secretos de la vida</a></h1>
         <p>Cuerpo</p>
         <p>Un cuerpo fuerte, sano, acorde con tus estándares de belleza, es uno de los primeros
@@ -12,6 +23,7 @@ pasos para empezar a crear un estilo de vida extraordinario.</p>
 
       <div>
         <h2><a href="">Recorre el Mundo</a></h2>
+        <p>Publicado el 4 de Agosto</p
         <em>Recorrer el mundo es uno de los principales sueños
           de mucha gente. A todos nos gusta imaginarnos en
           parajes desconocidos, en países exóticos, en
